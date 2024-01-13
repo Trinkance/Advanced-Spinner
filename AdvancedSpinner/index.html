@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Advanced Spinner</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="main-container">
+            <div class="wheel-container">
+                <canvas class="wheel" id="wheel" height="560px" width="560px"></canvas>
+                <img src="images/pointer.png" alt="" class="pointer-visual prevent-select">
+            </div>
+
+            <div class="right-panel">
+                <div class="right-panel-top">
+                    <h3 class="inputs-text prevent-select">Inputs</h3>
+                    <img src="images/plus.png" alt="Add new input" class="input-add prevent-select" id="input-add">
+                </div>
+
+                <div class="input-list" id="input-list" data-expanded=true></div>
+                <div class="saves" id="saves" data-expanded=false>
+                    <div class="saves-topbar">
+                        <h3 class="saves-text prevent-select" id="saves-text">Saved (0)</h3>
+                        <img src="images/expand.png" alt="Open list of saved wheels" class="saves-toggle prevent-select" id="saves-toggle">
+                    </div>
+
+                    <div class="saves-list" id="saves-list"></div>
+                    <div class="saves-current" id="saves-current">
+                        <hr class="saves-current-divider">
+                        <input type="text" class="saves-current-name" id="saves-current-name" value="" placeholder="Save name">
+                        <img src="images/upload.png" alt="Save current wheel" class="saves-current-upload prevent-select" id="saves-current-upload" width="16px" height="16px">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-menu" id="settings-menu">
+            <div class="setting" data-setting="spinDur" data-default=6000>
+                <input type="number" value="6000" class="setting-input" id="setting-spin-dur">
+                <h5 class="setting-display-name prevent-select">Spin Duration</h5>
+            </div>
+
+            <div class="setting" data-setting="spinLevel" data-default=80>
+                <input type="number" value="80" class="setting-input" id="setting-spin-level">
+                <h5 class="setting-display-name prevent-select">Spin Level</h5>
+            </div>
+        </div>
+
+        <div class="topbar">
+            <h2 class="topbar-title prevent-select">Spinner Wheel</h2>
+
+            <a href="https://github.com/Trinkance"class="topbar-source prevent-select" target="_blank"><img src="images/github.png" width="32px"></a>
+            <img class="settings-button prevent-select" id="settings-button" src="images/gear.png">
+            <div class="appearance-toggle" id="appearance-toggle"><img class="appearance-icon prevent-select" id="appearance-icon" src="images/light_mode_icon.png"></div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
